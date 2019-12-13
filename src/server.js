@@ -1,16 +1,10 @@
-let socket = require('socket.io');
+let io = require('socket.io');
 let mysql = require('mysql');
-let io = socketIO(5000, {
-    path: '/',
-    serveClient: false
-});
+let http = require('http');
+let server = http.createServer();
+server.listen(80, "18.207.108.5");
+let socket = io.listen(server);
 
-// Remote SQL server
-let con = mysql.createConnection({
-    host: "remotemysql.com",
-    user: "sjVokhoF61",
-    password: "qOMReXqbwb",
-    database: "sjVokhoF61"
-});
+
 
 // IP of AWS server 18.207.108.5

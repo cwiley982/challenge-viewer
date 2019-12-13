@@ -1,0 +1,1 @@
+SELECT * from sjVokhoF61.users;
